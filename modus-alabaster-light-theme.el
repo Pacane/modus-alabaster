@@ -165,27 +165,27 @@
      (bg-line-number-inactive "#F7F7F7")
      (bg-line-number-active   "#F0F0F0")
 
-     ;; Diff line backgrounds tint bg-main toward each state's accent, using
-     ;; the same "accent at low alpha over bg-main" recipe as bg-red-subtle
-     ;; above: the base/-highlight background is the accent at alpha 0.2, with
-     ;; -faint (0.1) and -refine (0.3) bracketing it.  (bg-removed at 0.2 is
-     ;; exactly #E8D1CF, matching bg-red-subtle.)  Without a background magit's
-     ;; *-diff-*-highlight faces were invisible; the fringe and foreground stay
-     ;; the vivid upstream accents so the gutter still reads at a glance.
+     ;; Upstream Alabaster styles diffs by foreground only, so the -faint
+     ;; slots (magit's non-highlighted hunks) stay at bg-main.  The current
+     ;; hunk gets a tint, though, or magit's *-diff-*-highlight faces would be
+     ;; invisible: bg-added/-removed/-changed are the accent over bg-main at
+     ;; alpha 0.2 (the same recipe as bg-red-subtle above, which bg-removed
+     ;; matches exactly) and -refine at alpha 0.3.  The fringe and foreground
+     ;; stay the vivid upstream accents.
      (bg-added         "#D3E2CD")
-     (bg-added-faint   "#E5ECE2")
+     (bg-added-faint   "#F7F7F7")
      (bg-added-refine  "#C1D7B9")
      (bg-added-fringe  "#6ABF40")
      (fg-added         "#6ABF40")
      (fg-added-intense "#6ABF40")
      (bg-removed         "#E8D1CF")
-     (bg-removed-faint   "#EFE4E3")
+     (bg-removed-faint   "#F7F7F7")
      (bg-removed-refine  "#E0BDBC")
      (bg-removed-fringe  "#D2322D")
      (fg-removed         "#D2322D")
      (fg-removed-intense "#D2322D")
      (bg-changed         "#F9EBD8")
-     (bg-changed-faint   "#F8F1E8")
+     (bg-changed-faint   "#F7F7F7")
      (bg-changed-refine  "#F9E5C9")
      (bg-changed-fringe  "#EC8013")
      (fg-changed         "#EC8013")
